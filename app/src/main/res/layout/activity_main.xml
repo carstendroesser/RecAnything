@@ -1,0 +1,289 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+
+    <!-- toolbar, recordignsfragment, bottombar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:background="@color/red"
+                    android:orientation="horizontal">
+
+                    <!-- toolbar -->
+                    <android.support.v7.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?android:attr/actionBarSize"
+                        android:layout_weight="1" />
+
+
+                    <ProgressBar
+                        android:id="@+id/spinner"
+                        android:layout_width="?android:attr/actionBarSize"
+                        android:padding="@dimen/padding_normal"
+                        android:layout_height="?android:attr/actionBarSize"
+                        android:layout_gravity="center"
+                        android:indeterminateTint="@color/white"
+                        android:visibility="gone"/>
+
+                    <Button
+                        style="?android:attr/borderlessButtonStyle"
+                        android:id="@+id/premiumButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="?android:attr/actionBarSize"
+                        android:layout_gravity="right"
+                        android:maxLines="1"
+                        android:text="@string/buy_premium"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_small"/>
+
+                    <ImageView
+                        android:id="@+id/menuButton"
+                        android:layout_width="?android:attr/actionBarSize"
+                        android:layout_height="?android:attr/actionBarSize"
+                        android:layout_gravity="right"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:padding="@dimen/padding_normal"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/dots"
+                        android:tint="@color/white" />
+
+                </LinearLayout>
+
+                <com.carstendroesser.audiorecorder.views.RevealFrameLayout
+                    android:id="@+id/searchRevealFrameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="@dimen/listitem_mediacontainer_paddingleft"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="@dimen/padding_normal"
+                            android:paddingRight="@dimen/padding_small"
+                            android:text="@string/filter"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_listitem_primary" />
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/searchEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:ellipsize="none"
+                            android:fadingEdgeLength="@dimen/padding_normal"
+                            android:hint="@string/filter_hint"
+                            android:requiresFadingEdge="horizontal"
+                            android:singleLine="true"
+                            android:theme="@style/EditTextStyle" />
+
+                        <ImageView
+                            android:id="@+id/searchCloseButton"
+                            android:layout_width="?android:attr/actionBarSize"
+                            android:layout_height="?android:attr/actionBarSize"
+                            android:layout_gravity="right"
+                            android:background="?android:attr/selectableItemBackgroundBorderless"
+                            android:padding="@dimen/padding_normal"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/close_red" />
+
+                    </LinearLayout>
+
+                </com.carstendroesser.audiorecorder.views.RevealFrameLayout>
+
+            </FrameLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <!-- recordings-fragment -->
+        <fragment
+            android:id="@+id/recordingsFragment"
+            android:name="com.carstendroesser.audiorecorder.fragments.RecordingsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_recordings" />
+
+        <!-- horizontal divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/gray" />
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/white">
+
+            <!-- the bottombar below the fab -->
+            <LinearLayout
+                android:id="@+id/bottomBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/categoriesButton"
+                    android:layout_width="?android:attr/actionBarSize"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="@dimen/padding_normal"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/categories" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/quickSettingsButton"
+                    android:layout_width="?android:attr/actionBarSize"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="@dimen/padding_normal"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/settings" />
+
+            </LinearLayout>
+        </android.support.design.widget.AppBarLayout>
+
+    </LinearLayout>
+
+    <com.carstendroesser.audiorecorder.views.RevealFrameLayout
+        android:id="@+id/recordingScreenLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/darkred"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/freeversionMessageView"
+            android:layout_width="wrap_content"
+            android:maxWidth="150dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_very_small"
+            android:padding="@dimen/padding_small"
+            android:text="@string/message_freeversion"/>
+
+        <LinearLayout
+            android:id="@+id/recordingviewsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:animateLayoutChanges="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- recording time -->
+            <com.carstendroesser.audiorecorder.views.AnimatedChronometer
+                android:id="@+id/chronometer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_extralarge" />
+
+            <TextView
+                android:id="@+id/realtimeinfoTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/padding_small"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_small" />
+
+            <TextView
+                android:id="@+id/silenceIndicatorTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/silence_indicator_text"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_small"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/seekLimitReachedIndicatorTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seek_limit_reached_indicator_text"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_small"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/recordingsAbortButton"
+            android:layout_width="?android:attr/actionBarSize"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_gravity="bottom|left"
+            android:layout_margin="@dimen/halfActionBarSize"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/padding_normal"
+            android:scaleType="fitXY"
+            android:src="@drawable/delete_white" />
+
+        <ImageView
+            android:id="@+id/recordingsPauseResumeButton"
+            android:layout_width="?android:attr/actionBarSize"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="@dimen/halfActionBarSize"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/padding_normal"
+            android:scaleType="fitXY"
+            android:src="@drawable/pause_white" />
+
+    </com.carstendroesser.audiorecorder.views.RevealFrameLayout>
+
+    <!-- the amplitude view -->
+    <com.carstendroesser.audiorecorder.views.AmplitudeView
+        android:id="@+id/amplitudeView"
+        android:layout_width="@dimen/amplitudeview_dimension"
+        android:layout_height="@dimen/amplitudeview_dimension"
+        app:layout_anchor="@id/bottomBarLayout"
+        app:layout_anchorGravity="center"
+        app:minCircleWidth="?android:attr/actionBarSize" />
+
+    <!-- the record-fab -->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/recordingsStartStopButton"
+        android:layout_width="?android:attr/actionBarSize"
+        android:layout_height="?android:attr/actionBarSize"
+        android:padding="@dimen/padding_normal"
+        android:scaleType="fitXY"
+        android:src="@drawable/recmic"
+        app:backgroundTint="@color/red"
+        app:layout_anchor="@id/bottomBarLayout"
+        app:layout_anchorGravity="center_horizontal" />
+
+</android.support.design.widget.CoordinatorLayout>

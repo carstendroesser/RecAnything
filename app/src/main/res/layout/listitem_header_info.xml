@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?android:attr/actionBarSize"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/listitem_header_filter_padding_left"
+        android:paddingRight="@dimen/padding_normal"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/textsize_info_bottomview" />
+
+    <Button
+        android:id="@+id/resetButton"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/padding_small"
+        android:text="@string/filter_button_reset"
+        android:textColor="@color/red"
+        android:textStyle="bold" />
+
+</LinearLayout>

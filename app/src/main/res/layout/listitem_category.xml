@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <!-- the specific category-icon -->
+    <ImageView
+        android:id="@+id/categoryListItemIconImageView"
+        android:layout_width="@dimen/icon_listitem"
+        android:layout_height="@dimen/icon_listitem"
+        android:layout_marginBottom="@dimen/padding_normal"
+        android:layout_marginLeft="@dimen/padding_normal"
+        android:layout_marginTop="@dimen/padding_normal"
+        android:background="@drawable/bg_listitem_icon"
+        android:padding="@dimen/padding_custom"
+        android:scaleType="fitXY"
+        android:src="@drawable/book" />
+
+    <!-- container for name & description of the category -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_listitem_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="@dimen/padding_normal"
+        android:paddingTop="@dimen/padding_listitem_vertical">
+
+        <!-- name -->
+        <TextView
+            android:id="@+id/categoryListItemNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_listitem_primary" />
+
+        <!-- description -->
+        <TextView
+            android:id="@+id/categoryListItemDescriptionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_listitem_secondary" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/categoryListItemDeleteImageView"
+        android:layout_width="@dimen/icon_listitem"
+        android:layout_height="@dimen/icon_listitem"
+        android:layout_marginBottom="@dimen/padding_normal"
+        android:layout_marginTop="@dimen/padding_normal"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:padding="@dimen/padding_custom"
+        android:scaleType="fitXY"
+        android:src="@drawable/delete" />
+
+    <ImageView
+        android:id="@+id/categoryListItemEditImageView"
+        android:layout_width="@dimen/icon_listitem"
+        android:layout_height="@dimen/icon_listitem"
+        android:layout_marginBottom="@dimen/padding_normal"
+        android:layout_marginRight="@dimen/padding_normal"
+        android:layout_marginTop="@dimen/padding_normal"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:padding="@dimen/padding_custom"
+        android:scaleType="fitXY"
+        android:src="@drawable/pencil" />
+
+
+</LinearLayout>

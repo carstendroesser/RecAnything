@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="icons">
+        <item>@drawable/microphone</item>
+        <item>@drawable/accountmultiple</item>
+        <item>@drawable/airballoon</item>
+        <item>@drawable/airplane</item>
+        <item>@drawable/archive</item>
+        <item>@drawable/basket</item>
+        <item>@drawable/book</item>
+        <item>@drawable/briefcase</item>
+        <item>@drawable/emoticon</item>
+        <item>@drawable/headphones</item>
+        <item>@drawable/heart</item>
+        <item>@drawable/laptop</item>
+        <item>@drawable/lock</item>
+        <item>@drawable/school</item>
+        <item>@drawable/star</item>
+    </integer-array>
+
+    <string-array name="samplerateEntries">
+        <item>8 kHz (lowest quality)</item>
+        <item>11 kHz (telephone quality)</item>
+        <item>16 kHz (standard quality)</item>
+        <item>22 kHz (AM Radio quality)</item>
+        <item>44 kHz (CD quality)</item>
+    </string-array>
+
+    <string-array name="samplerateValues">
+        <item>8000</item>
+        <item>11025</item>
+        <item>16000</item>
+        <item>22050</item>
+        <item>44100</item>
+    </string-array>
+
+    <string-array name="sourceEntries">
+        <item>Default microphone</item>
+        <item>Camera microphone</item>
+        <item>Phone microphone</item>
+    </string-array>
+
+    <string-array name="sourceValues">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="gainvalueEntries">
+        <item>none</item>
+        <item>+ 2 dB</item>
+        <item>+ 4 dB</item>
+        <item>+ 6 dB</item>
+        <item>+ 8 dB</item>
+        <item>+ 10 dB</item>
+        <item>+ 12 dB</item>
+        <item>+ 14 dB</item>
+        <item>+ 16 dB</item>
+    </string-array>
+
+    <string-array name="gainvalueValues">
+        <item>1.0</item>
+        <item>1.25</item>
+        <item>1.58</item>
+        <item>1.99</item>
+        <item>2.51</item>
+        <item>3.16</item>
+        <item>3.98</item>
+        <item>5.01</item>
+        <item>6.3</item>
+    </string-array>
+
+    <string-array name="seekvalueEntries">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="seekvalueValues">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="detectsilencevalueEntries">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="detectsilencevalueValues">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="detectsilencegateEntries">
+        <item>30 dB</item>
+        <item>35 dB</item>
+        <item>40 dB</item>
+        <item>45 dB</item>
+        <item>50 dB</item>
+        <item>55 dB</item>
+        <item>60 dB</item>
+        <item>65 dB</item>
+        <item>70 dB</item>
+    </string-array>
+
+    <!-- amplitudes -->
+    <string-array name="detectsilencegateValues">
+        <item>32</item>
+        <item>56</item>
+        <item>100</item>
+        <item>178</item>
+        <item>316</item>
+        <item>562</item>
+        <item>1000</item>
+        <item>1778</item>
+        <item>3162</item>
+    </string-array>
+
+    <string-array name="defaultfilenameEntries">
+        <item>@string/defaultfilename_count</item>
+        <item>@string/defaultfilename_timestamp</item>
+        <item>@string/defaultfilename_counttimestamp</item>
+        <item>@string/defaultfilename_timestamponly</item>
+    </string-array>
+
+    <string-array name="defaultfilenameValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="recorderEntries">
+        <item>@string/recorder_wav</item>
+        <item>@string/recorder_mp3</item>
+        <item>@string/recorder_aac</item>
+        <item>@string/recorder_tgpp</item>
+    </string-array>
+
+    <string-array name="recorderValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="playerRewindEntries">
+        <item>1 second</item>
+        <item>2 seconds</item>
+        <item>3 seconds</item>
+        <item>4 seconds</item>
+        <item>5 seconds</item>
+        <item>10 seconds</item>
+        <item>15 seconds</item>
+        <item>30 seconds</item>
+    </string-array>
+
+    <string-array name="playerRewindValues">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>30</item>
+    </string-array>
+
+
+</resources>

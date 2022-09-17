@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.carstendroesser.audiorecorder.views.PreferenceBlock android:key="PREMIUM_PREFERENCE" />
+
+    <com.carstendroesser.audiorecorder.views.PreferenceHeader android:title="@string/settings_title">
+
+        <com.carstendroesser.audiorecorder.views.IconPreference
+            android:icon="@drawable/tune"
+            android:key="NESTED_KEY_GENERAL"
+            android:persistent="false"
+            android:title="@string/settings_sub_general" />
+
+        <com.carstendroesser.audiorecorder.views.IconPreference
+            android:icon="@drawable/microphone"
+            android:key="NESTED_KEY_RECORDER"
+            android:persistent="false"
+            android:title="@string/settings_sub_recorder" />
+
+        <com.carstendroesser.audiorecorder.views.IconPreference
+            android:icon="@drawable/ui"
+            android:key="NESTED_KEY_UI"
+            android:persistent="false"
+            android:title="@string/settings_sub_interface" />
+
+        <com.carstendroesser.audiorecorder.views.IconPreference
+            android:icon="@drawable/cloud"
+            android:key="NESTED_KEY_CLOUD"
+            android:persistent="false"
+            android:title="@string/settings_sub_cloud" />
+
+    </com.carstendroesser.audiorecorder.views.PreferenceHeader>
+
+    <com.carstendroesser.audiorecorder.views.DividerPreference />
+
+    <com.carstendroesser.audiorecorder.views.PreferenceHeader android:title="@string/information">
+
+        <com.carstendroesser.audiorecorder.views.IconPreference
+            android:icon="@drawable/security"
+            android:key="PRIVACY_POLICY"
+            android:persistent="false"
+            android:title="@string/privacypolicy" />
+
+        <com.carstendroesser.audiorecorder.views.IconPreference
+            android:icon="@drawable/message"
+            android:key="CONTACT"
+            android:persistent="false"
+            android:summary="@string/contact_summary"
+            android:title="@string/contact" />
+
+        <com.carstendroesser.audiorecorder.views.IconPreference
+            android:icon="@drawable/about"
+            android:key="ABOUT"
+            android:persistent="false"
+            android:summary="@string/about_summary"
+            android:title="@string/about" />
+
+    </com.carstendroesser.audiorecorder.views.PreferenceHeader>
+
+</PreferenceScreen>

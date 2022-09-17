@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/settings_sub_cloud"
+    android:key="CLOUD">
+
+    <com.carstendroesser.audiorecorder.views.PreferenceHeader android:title="@string/clouds">
+
+        <Preference
+            android:key="ACCOUNT_DROPBOX"
+            android:persistent="false"
+            android:summary="@string/account_dropbox_summary"
+            android:title="@string/account_dropbox_title" />
+
+    </com.carstendroesser.audiorecorder.views.PreferenceHeader>
+
+    <com.carstendroesser.audiorecorder.views.DividerPreference />
+
+    <com.carstendroesser.audiorecorder.views.PreferenceHeader android:title="@string/behavior">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:enabled="false"
+            android:key="cloudautomaticupload"
+            android:summary="@string/settings_summary_automaticupload"
+            android:title="@string/settings_title_automaticupload" />
+
+    </com.carstendroesser.audiorecorder.views.PreferenceHeader>
+
+</PreferenceScreen>

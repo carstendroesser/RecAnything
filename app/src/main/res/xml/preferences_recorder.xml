@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/settings_sub_recorder">
+
+    <com.carstendroesser.audiorecorder.views.PreferenceHeader android:title="@string/settings_quality">
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/recorderEntries"
+            android:entryValues="@array/recorderValues"
+            android:key="recorder"
+            android:negativeButtonText=""
+            android:summary="@string/settings_summary_recorder"
+            android:title="@string/settings_title_recorder" />
+
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/sourceEntries"
+            android:entryValues="@array/sourceValues"
+            android:key="source"
+            android:negativeButtonText=""
+            android:summary="@string/settings_summary_source"
+            android:title="@string/settings_title_source" />
+
+        <ListPreference
+            android:defaultValue="44100"
+            android:entries="@array/samplerateEntries"
+            android:entryValues="@array/samplerateValues"
+            android:key="samplerate"
+            android:negativeButtonText=""
+            android:summary="@string/settings_summary_samplerate"
+            android:title="@string/settings_title_samplerate" />
+
+    </com.carstendroesser.audiorecorder.views.PreferenceHeader>
+
+    <com.carstendroesser.audiorecorder.views.DividerPreference />
+
+    <com.carstendroesser.audiorecorder.views.PreferenceHeader android:title="@string/settings_filter">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="echocanceling"
+            android:summary="@string/settings_summary_echocanceling"
+            android:title="@string/settings_title_echocanceling" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="noisecanceling"
+            android:summary="@string/settings_summary_backgroundnoise"
+            android:title="@string/settings_title_backgroundnoise" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="autogain"
+            android:summary="@string/settings_summary_autogain"
+            android:title="@string/settings_title_autogain" />
+
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/gainvalueEntries"
+            android:entryValues="@array/gainvalueValues"
+            android:key="gainvalue"
+            android:negativeButtonText=""
+            android:summary="@string/settings_summary_gainvalue"
+            android:title="@string/settings_title_gainvalue" />
+
+    </com.carstendroesser.audiorecorder.views.PreferenceHeader>
+
+    <com.carstendroesser.audiorecorder.views.DividerPreference />
+
+    <com.carstendroesser.audiorecorder.views.PreferenceHeader android:title="@string/seeking">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="seeking"
+            android:summary="@string/settings_summary_seeking"
+            android:title="@string/settings_title_seeking" />
+
+        <ListPreference
+            android:defaultValue="1"
+            android:dependency="seeking"
+            android:entries="@array/seekvalueEntries"
+            android:entryValues="@array/seekvalueValues"
+            android:key="seekvalue"
+            android:negativeButtonText=""
+            android:summary="@string/settings_summary_seekvalue"
+            android:title="@string/settings_title_seekvalue" />
+
+    </com.carstendroesser.audiorecorder.views.PreferenceHeader>
+
+    <com.carstendroesser.audiorecorder.views.DividerPreference />
+
+    <com.carstendroesser.audiorecorder.views.PreferenceHeader android:title="@string/skip_silence">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="detectsilence"
+            android:summary="@string/settings_summary_detectsilence"
+            android:title="@string/settings_title_detectsilence" />
+
+        <ListPreference
+            android:defaultValue="2"
+            android:dependency="detectsilence"
+            android:entries="@array/detectsilencevalueEntries"
+            android:entryValues="@array/detectsilencevalueValues"
+            android:key="detectsilencevalue"
+            android:negativeButtonText=""
+            android:summary="@string/settings_summary_detectsilencevalue"
+            android:title="@string/settings_title_detectsilencevalue" />
+
+        <ListPreference
+            android:defaultValue="1000"
+            android:dependency="detectsilence"
+            android:entries="@array/detectsilencegateEntries"
+            android:entryValues="@array/detectsilencegateValues"
+            android:key="detectsilencegate"
+            android:negativeButtonText=""
+            android:summary="@string/settings_summary_detectsilencegate"
+            android:title="@string/settings_title_detectsilencegate" />
+
+    </com.carstendroesser.audiorecorder.views.PreferenceHeader>
+
+</PreferenceScreen>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="confirm_recorder_change_text_aac">Sie sind dabei das Audioformat zu ändern. Filter (Echo &amp; Hintergrundgeräusche), Zurückspulen, Stille überspringen und Zuschneiden sind für AAC nicht verfügbar. Möchten Sie das Audioformat wirklich zu AAC ändern?</string>
+    <string name="confirm_recorder_change_text_3gp">Sie sind dabei das Audioformat zu ändern. Filter (Echo &amp; Hintergrundgeräusche), Zurückspulen, Stille überspringen und Zuschneiden sind für 3GP nicht verfügbar. Möchten Sie das Audioformat wirklich zu 3GP ändern?</string>
+    <string name="confirm_recorder_change_text_mp3">Sie sind dabei das Audioformat zu ändern. Zurückspulen und Zuschneiden sind für MP3 nicht verfügbar. Möchten Sie das Audioformat wirklich zu MP3 ändern?</string>
+</resources>

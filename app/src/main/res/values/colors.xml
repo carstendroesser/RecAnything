@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gray">#cccccc</color>
+    <color name="lightgray">#f1f1f1</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="green">#4CAF50</color>
+    <color name="teal">#009688</color>
+    <color name="red">#F44336</color>
+    <color name="red_50">#80F44336</color>
+    <color name="darkred">#D32F2F</color>
+    <color name="blue">#2196F3</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="orange">#FF9800</color>
+    <color name="lightwhite">#A0ffffff</color>
+    <color name="ultralightwhite">#10ffffff</color>
+    <color name="transparent">#00000000</color>
+    <array name="picker_colors">
+        <item>@color/gray</item>
+        <item>@color/black</item>
+        <item>@color/red</item>
+        <item>@color/green</item>
+        <item>@color/blue</item>
+        <item>@color/yellow</item>
+        <item>@color/orange</item>
+        <item>@color/teal</item>
+    </array>
+</resources>

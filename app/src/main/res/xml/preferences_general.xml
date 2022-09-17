@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/settings_sub_general">
+
+    <com.carstendroesser.audiorecorder.views.PreferenceHeader android:title="@string/settings_title_telephone">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="silentringermode"
+            android:summary="@string/settings_summary_silentnotifications"
+            android:title="@string/settings_title_silentnotifications" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="pauseonlowbattery"
+            android:summary="@string/settings_summary_low_battery"
+            android:title="@string/settings_title_low_battery" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="keepscreenon"
+            android:summary="@string/settings_summary_keepscreenon"
+            android:title="@string/settings_title_keepscreenon" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="mediastore"
+            android:summary="@string/settings_summary_mediastore"
+            android:title="@string/settings_title_mediastore" />
+
+        <com.carstendroesser.audiorecorder.views.DividerPreference />
+
+    </com.carstendroesser.audiorecorder.views.PreferenceHeader>
+
+    <com.carstendroesser.audiorecorder.views.PreferenceHeader android:title="@string/settings_storage">
+
+        <Preference
+            android:key="PATH"
+            android:persistent="false"
+            android:summary="@string/path_summary"
+            android:title="@string/path_title" />
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/defaultfilenameEntries"
+            android:entryValues="@array/defaultfilenameValues"
+            android:key="defaultfilename"
+            android:negativeButtonText=""
+            android:summary="@string/settings_summary_defaultfilename"
+            android:title="@string/settings_title_defaultfilename" />
+
+    </com.carstendroesser.audiorecorder.views.PreferenceHeader>
+
+    <com.carstendroesser.audiorecorder.views.DividerPreference />
+
+    <com.carstendroesser.audiorecorder.views.PreferenceHeader android:title="@string/settings_player">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="useinternalplayer"
+            android:summary="@string/settings_summary_defaultplayer"
+            android:title="@string/settings_title_defaultplayer" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:dependency="useinternalplayer"
+            android:key="autoplay"
+            android:summary="@string/settings_summary_autoplay"
+            android:title="@string/settings_title_autoplay" />
+
+        <ListPreference
+            android:defaultValue="5"
+            android:dependency="useinternalplayer"
+            android:entries="@array/playerRewindEntries"
+            android:entryValues="@array/playerRewindValues"
+            android:key="rewindseconds"
+            android:negativeButtonText=""
+            android:summary="@string/settings_summary_rewindseconds"
+            android:title="@string/settings_title_rewindseconds" />
+
+    </com.carstendroesser.audiorecorder.views.PreferenceHeader>
+
+</PreferenceScreen>

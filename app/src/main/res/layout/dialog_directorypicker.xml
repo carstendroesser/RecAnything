@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="1000dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_normal"
+            android:text="@string/dialog_directorypicker_title"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_normal"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/selectedDirectoryHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_normal"
+            android:paddingRight="@dimen/padding_normal"
+            android:text="@string/select_directory"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_normal" />
+
+        <TextView
+            android:id="@+id/selectedDirectory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_normal"
+            android:layout_marginRight="@dimen/padding_normal"
+            android:layout_marginTop="@dimen/padding_small"
+            android:lines="2"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/textsize_normal"
+            android:textStyle="italic" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:layout_marginTop="@dimen/padding_small"
+            android:background="@color/lightgray" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fadeScrollbars="false"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarSize="@dimen/scrollbar_size"
+            android:scrollbarThumbHorizontal="@drawable/background_scrollview_scrollbarstyle_vertical"
+            android:scrollbars="vertical" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/lightgray" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small">
+
+            <Button
+                android:id="@+id/buttonCancel"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/button_cancel"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_dialog_button" />
+
+            <Button
+                android:id="@+id/buttonSelect"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/button_select"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_dialog_button" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

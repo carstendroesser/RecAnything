@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_normal"
+            android:text="@string/cut_and_trim"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_normal"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/padding_normal"
+            android:paddingRight="@dimen/padding_normal">
+
+            <!-- the loading container with progressbar -->
+
+            <LinearLayout
+                android:id="@+id/loadingContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- circle progressbar -->
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:indeterminateTint="@color/red" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding_normal" />
+
+                <!-- progress hint -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/cut_and_trim_progress"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_small" />
+
+                <!-- the progress -->
+
+                <ProgressBar
+                    android:id="@+id/loadingProgressBarHorizontal"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/progressbar_height"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progressbar_progress" />
+
+            </LinearLayout>
+
+            <!-- trim container -->
+
+            <LinearLayout
+                android:id="@+id/trimContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- instructions -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="@string/cut_and_trim_message"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_normal" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding_normal" />
+
+                <!-- start & end of selection -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <!-- selection start -->
+
+                    <TextView
+                        android:id="@+id/startTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_small" />
+
+                    <!-- selection slider -->
+
+                    <io.apptik.widget.MultiSlider
+                        android:id="@+id/multiSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:track="@drawable/multislider_progress_secondary"
+                        app:drawThumbsApart="true"
+                        app:range1="@drawable/multislider_progress_secondary"
+                        app:rangeColor="@color/red"
+                        app:stepsThumbsApart="5"
+                        app:thumbNumber="2" />
+
+                    <!-- selection end -->
+
+                    <TextView
+                        android:id="@+id/endTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_small" />
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding_normal" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:background="@color/gray" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding_normal" />
+
+                <!-- message prelisten -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/cut_and_trim_prelisten"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_normal" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding_normal" />
+
+                <!-- play pause button -->
+
+                <ImageView
+                    android:id="@+id/playPauseButton"
+                    android:layout_width="?android:attr/actionBarSize"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:layout_gravity="center_horizontal"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:padding="@dimen/padding_verysmall"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/play"
+                    android:tint="@color/red" />
+
+                <!-- info of selection -->
+
+                <TextView
+                    android:id="@+id/infoTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="00:12 / 2.5 MB"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_small" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding_normal" />
+
+            </LinearLayout>
+
+            <!-- error state -->
+
+            <TextView
+                android:id="@+id/errorTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cut_and_trim_error_message"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_normal" />
+
+        </FrameLayout>
+
+        <!-- buttons container -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small">
+
+            <!-- error cancel -->
+
+            <Button
+                android:id="@+id/errorCancelButton"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/button_cancel"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_dialog_button"
+                android:visibility="gone" />
+
+            <!-- trim cancel -->
+
+            <Button
+                android:id="@+id/trimCancelButton"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/button_cancel"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_dialog_button"
+                android:visibility="gone" />
+
+            <!-- trim -->
+
+            <Button
+                android:id="@+id/trimToButton"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/trim_to_selection"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_dialog_button"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

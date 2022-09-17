@@ -1,0 +1,32 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="padding_normal">16dp</dimen>
+    <dimen name="textsize_extralarge">80dp</dimen>
+    <dimen name="textsize_normal">16dp</dimen>
+    <dimen name="textsize_very_small">8dp</dimen>
+    <dimen name="textsize_small">12dp</dimen>
+    <dimen name="textsize_dialog_button">14dp</dimen>
+    <dimen name="padding_custom">10dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_dialog_content">12dp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+    <dimen name="textsize_listitem_primary">16dp</dimen>
+    <dimen name="textsize_listitem_secondary">14dp</dimen>
+    <dimen name="padding_listitem_vertical">20dp</dimen>
+    <dimen name="icon_listitem">40dp</dimen>
+    <dimen name="padding_list">8dp</dimen>
+    <dimen name="amplitudeview_dimension">200dp</dimen>
+    <dimen name="listitem_mediacontainer_paddingleft">72dp</dimen>
+    <dimen name="textsize_media_more">16dp</dimen>
+    <dimen name="scrollbar_size">2dp</dimen>
+    <dimen name="listitem_note_padding">72dp</dimen>
+    <dimen name="textsize_info_bottomview">12dp</dimen>
+    <dimen name="listitem_header_filter_padding_left">72dp</dimen>
+    <dimen name="listitem_footer_padding_left">72dp</dimen>
+    <dimen name="halfActionBarSize">28dp</dimen>
+    <dimen name="progressbar_height">4dp</dimen>
+    <dimen name="padding_verysmall">4dp</dimen>
+    <dimen name="multi_slider_progress_height">1dp</dimen>
+    <dimen name="textsize_preference_block">12dp</dimen>
+
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:bottom="@dimen/scrollbar_size"
+        android:right="@dimen/scrollbar_size"
+        android:top="@dimen/scrollbar_size">
+        <shape>
+            <solid android:color="@color/gray" />
+            <size android:width="@dimen/scrollbar_size" />
+        </shape>
+    </item>
+</layer-list>

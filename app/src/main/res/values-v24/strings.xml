@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="confirm_recorder_change_text_aac">You are about to change the audioformat. Filters (echo &amp; noise), seeking, skip-silence and cutting are not supported for AAC. Do you really want to change the audioformat to AAC?</string>
+    <string name="confirm_recorder_change_text_3gp">You are about to change the audioformat. Filters (echo &amp; noise), seeking, skip-silence and cutting are not supported for 3GP. Do you really want to change the audioformat to 3GP?</string>
+    <string name="confirm_recorder_change_text_mp3">You are about to change the audioformat. Seeking and cutting are not supported for MP3. Do you really want to change the audioformat to MP3?</string>
+</resources>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Loadingindicator -->
+    <ProgressBar
+        android:id="@+id/recordingsLoadingIndicator"
+        android:layout_width="?android:attr/actionBarSize"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/red" />
+
+    <!-- recordings-emptyview -->
+    <LinearLayout
+        android:id="@+id/recordingsEmptyViewContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="?android:attr/actionBarSize"
+        android:orientation="vertical">
+
+        <!-- emptyview text -->
+        <TextView
+            android:id="@+id/recordingsEmptyViewTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="@dimen/padding_normal"
+            android:paddingRight="@dimen/padding_normal"
+            android:text="@string/empty_records"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/textsize_normal" />
+
+    </LinearLayout>
+
+    <!-- all recordings-list -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recordingsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fadeScrollbars="false"
+        android:paddingBottom="@dimen/padding_list"
+        android:paddingTop="@dimen/padding_list"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarSize="@dimen/scrollbar_size"
+        android:scrollbarThumbVertical="@drawable/background_scrollview_scrollbarstyle_vertical"
+        android:scrollbars="vertical" />
+
+    <LinearLayout
+        android:id="@+id/noResultsBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/red"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/noResultsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="none"
+            android:fadingEdgeLength="@dimen/padding_normal"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_normal"
+            android:paddingRight="@dimen/padding_normal"
+            android:requiresFadingEdge="horizontal"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_listitem_secondary" />
+
+        <Button
+            android:id="@+id/noResultsResetButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/padding_small"
+            android:text="@string/filter_button_reset"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</FrameLayout>

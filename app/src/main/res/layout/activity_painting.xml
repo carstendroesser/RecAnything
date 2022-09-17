@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary">
+
+        <!-- toolbar -->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:fadeScrollbars="false"
+            android:scrollbarAlwaysDrawHorizontalTrack="true"
+            android:scrollbarSize="@dimen/scrollbar_size"
+            android:scrollbarThumbHorizontal="@drawable/background_scrollview_scrollbarstyle_horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:orientation="horizontal">
+
+                <com.carstendroesser.audiorecorder.views.ContextMenuItem
+                    android:id="@+id/paintingColorView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:itemAlternativeTextColor="@color/white"
+                    app:itemIcon="@drawable/colors"
+                    app:itemSpacing="false"
+                    app:itemText="@string/painting_color" />
+
+                <com.carstendroesser.audiorecorder.views.ContextMenuItem
+                    android:id="@+id/paintingThicknessView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:itemAlternativeTextColor="@color/white"
+                    app:itemIcon="@drawable/thickness"
+                    app:itemSpacing="false"
+                    app:itemText="@string/painting_thickness" />
+
+                <com.carstendroesser.audiorecorder.views.ContextMenuItem
+                    android:id="@+id/paintingUndoView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:itemAlternativeTextColor="@color/white"
+                    app:itemIcon="@drawable/undo"
+                    app:itemSpacing="false"
+                    app:itemText="@string/painting_undo" />
+
+                <com.carstendroesser.audiorecorder.views.ContextMenuItem
+                    android:id="@+id/paintingClearView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:itemAlternativeTextColor="@color/white"
+                    app:itemIcon="@drawable/clear"
+                    app:itemSpacing="false"
+                    app:itemText="@string/painting_clear" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- paintingview -->
+        <com.carstendroesser.audiorecorder.views.PaintView
+            android:id="@+id/paintView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/white" />
+
+    </FrameLayout>
+
+</LinearLayout>

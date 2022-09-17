@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.carstendroesser.audiorecorder.views.SquaredImageView
+        android:id="@+id/listitemMediaImageView"
+        android:layout_width="@dimen/icon_listitem"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/padding_small"
+        android:adjustViewBounds="true"
+        android:background="@color/lightgray"
+        android:scaleType="centerCrop" />
+
+</FrameLayout>

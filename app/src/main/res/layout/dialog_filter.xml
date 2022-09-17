@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_normal"
+            android:text="@string/dialog_filter_title"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_normal"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ProgressBar
+                android:id="@+id/selectableCategoriesLoadingIndicator"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/red"
+                android:indeterminateTintMode="src_in"
+                android:padding="@dimen/padding_small" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/selectableCategoriesRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fadeScrollbars="false"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbarThumbVertical="@drawable/background_scrollview_scrollbarstyle_vertical"
+                android:scrollbars="vertical" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small">
+
+            <Button
+                android:id="@+id/buttonCancel"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/button_cancel"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_dialog_button" />
+
+            <Button
+                android:id="@+id/buttonApply"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/apply"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_dialog_button" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

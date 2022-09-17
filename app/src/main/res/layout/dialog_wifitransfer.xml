@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:padding="@dimen/padding_normal"
+            android:text="@string/wifi_transfer"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_normal"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- error container no wifi -->
+
+            <LinearLayout
+                android:id="@+id/errorContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/red"
+                    android:orientation="vertical">
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/padding_normal" />
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_listitem"
+                        android:layout_height="@dimen/icon_listitem"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/padding_small"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/wifioff" />
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/padding_small" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/padding_normal"
+                        android:paddingRight="@dimen/padding_normal"
+                        android:text="@string/no_wifi_connection"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_normal"
+                        android:textStyle="bold" />
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/padding_normal" />
+
+                </LinearLayout>
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding_normal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_normal"
+                    android:paddingRight="@dimen/padding_normal"
+                    android:text="@string/wifi_disabled"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_normal" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding_small" />
+
+            </LinearLayout>
+
+            <!-- info container with ip adress -->
+
+            <LinearLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/red"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/padding_normal"
+                        android:paddingRight="@dimen/padding_normal"
+                        android:text="@string/wifi_transfer_hint"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_small" />
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/padding_normal" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_listitem"
+                            android:layout_height="@dimen/icon_listitem"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/smartphone" />
+
+                        <android.support.v4.widget.Space
+                            android:layout_width="@dimen/padding_normal"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_listitem"
+                            android:layout_height="@dimen/icon_listitem"
+                            android:padding="@dimen/padding_small"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/arrow_white" />
+
+                        <android.support.v4.widget.Space
+                            android:layout_width="@dimen/padding_normal"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_listitem"
+                            android:layout_height="@dimen/icon_listitem"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/monitor" />
+
+                    </LinearLayout>
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/padding_small" />
+
+                    <TextView
+                        android:id="@+id/ipAdressTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/padding_normal"
+                        android:paddingRight="@dimen/padding_normal"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_normal"
+                        android:textStyle="bold" />
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/padding_normal" />
+
+                </LinearLayout>
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding_normal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_normal"
+                    android:paddingRight="@dimen/padding_normal"
+                    android:text="@string/wifi_steps_one"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_normal" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding_small" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_normal"
+                    android:paddingRight="@dimen/padding_normal"
+                    android:text="@string/wifi_steps_two"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_normal" />
+
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding_small" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_normal"
+                    android:paddingRight="@dimen/padding_normal"
+                    android:text="@string/wifi_steps_three"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_normal" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding_small" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small">
+
+            <Button
+                android:id="@+id/buttonCancel"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/button_cancel"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_dialog_button" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

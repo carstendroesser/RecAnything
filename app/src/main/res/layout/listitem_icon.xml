@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <View
+        android:id="@+id/iconBackgroundView"
+        android:layout_width="@dimen/icon_listitem"
+        android:layout_height="@dimen/icon_listitem"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_listitem_icon"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iconImageView"
+        android:layout_width="?android:attr/actionBarSize"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:padding="@dimen/padding_normal"
+        android:scaleType="fitXY" />
+
+</FrameLayout>

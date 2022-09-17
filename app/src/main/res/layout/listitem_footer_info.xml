@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="@dimen/listitem_footer_padding_left"
+        android:paddingRight="@dimen/padding_normal"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/textsize_info_bottomview" />
+
+</LinearLayout>

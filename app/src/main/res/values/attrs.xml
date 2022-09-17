@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AmplitudeView">
+        <attr name="minCircleWidth" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ContextMenuItem">
+        <attr name="itemText" format="string" />
+        <attr name="itemAlternativeTextColor" format="integer" />
+        <attr name="itemIcon" format="integer" />
+        <attr name="itemSpacing" format="boolean" />
+    </declare-styleable>
+
+</resources>

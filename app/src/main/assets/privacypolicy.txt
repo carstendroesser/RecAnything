@@ -1,0 +1,32 @@
+This software is offered by:
+
+Softwareentwicklung und -vertrieb Carsten Drösser, Sebastian-Schäffer-Str.7, 40627 Düsseldorf (Germany), carsten.droesser[at]googlemail.com.
+In the following text, „Softwareentwicklung und -vertrieb Carsten Drösser“ is referred to as „we“ or „our“. The app’s users are referred to as „you“.
+
+Data Collection by „Softwareentwicklung und -vertrieb Carsten Drösser“:
+
+We do not collect any personally identifiable information.
+
+The app allows to record with help of your device’s internal microphone and needs the corresponding permission for that. The recordings are stored on your device (internal or external storage) and are not sent to or analyzed by us automatically. Sending recordings per mail or uploading recordings to cloud storage must be done actively by you with help of a third party app. Please consult the third party app’s privacy policy for questions related to their data privacy.
+
+Permissions requested and how they are being used by the app:
+
+1. RECORD_AUDIO
+Allows to record audio from the device’s microphone, used for making the recordings.
+
+2. WRITE_EXTERNAL_STORAGE
+Allows the app to read and write from internal and external storage. This is used to store recordings, photos and drawings made by you.
+
+3. WRITE_SETTINGS & MODIFY_AUDIO_SETTINGS & CHANGE_CONFIGURATION
+Is needed to set a recording as a ringtone.
+
+4. INTERNET
+Is used for the WiFi-Transfer feature.
+
+5. ACCESS_WIFI_STATE & ACCESS_NETWORK_STATE
+Allows us to check the wifi connection of your device. Thus we can detect if a WiFi-Transfer-Server can be started or not. The server is needed for the WiFi Transfer feature.
+
+6. BILLING
+Needed to provide In-app-billing feature.
+
+The app offers a feature „CONTACT“. This allows to send an email to us, per default containing some device-related information and the app version as text for customer support. Sending of that email has to be done actively by you with help of a third party app (e.g. Google Mail) so that you can check which information is transferred from the used app yourself. The debug information is only used to offer you a better customer support. It is not used for any other purpose. If you want to contact us without sending the information, feel free to remove the debug output block from the mail.

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_normal"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_normal"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/errorTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_small"
+                    android:paddingLeft="@dimen/padding_normal"
+                    android:paddingRight="@dimen/padding_normal"
+                    android:text="@string/about_not_found_message"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_normal"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_normal"
+                    android:layout_marginRight="@dimen/padding_normal"
+                    android:text="@string/path"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_small" />
+
+                <TextView
+                    android:id="@+id/pathTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_normal"
+                    android:paddingRight="@dimen/padding_normal"
+                    android:text="placeholder"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_normal" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/padding_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_normal"
+                    android:layout_marginRight="@dimen/padding_normal"
+                    android:text="@string/category"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_small" />
+
+                <TextView
+                    android:id="@+id/categoryTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_normal"
+                    android:paddingRight="@dimen/padding_normal"
+                    android:text="placeholder"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_normal" />
+
+
+                <LinearLayout
+                    android:id="@+id/qualityContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/padding_small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_normal"
+                        android:layout_marginRight="@dimen/padding_normal"
+                        android:text="@string/quality"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_small" />
+
+                    <TextView
+                        android:id="@+id/qualityTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/padding_normal"
+                        android:paddingRight="@dimen/padding_normal"
+                        android:text="placeholder"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_normal" />
+
+                </LinearLayout>
+
+                <android.support.v4.widget.Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/padding_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_normal"
+                    android:layout_marginRight="@dimen/padding_normal"
+                    android:text="@string/last_modified"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_small" />
+
+                <TextView
+                    android:id="@+id/lastModifiedTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_normal"
+                    android:paddingRight="@dimen/padding_normal"
+                    android:text="placeholder"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_normal" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/padding_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_normal"
+                    android:layout_marginRight="@dimen/padding_normal"
+                    android:text="@string/size"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_small" />
+
+                <TextView
+                    android:id="@+id/sizeTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_normal"
+                    android:paddingRight="@dimen/padding_normal"
+                    android:text="placeholder"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_normal" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/padding_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_normal"
+                    android:layout_marginRight="@dimen/padding_normal"
+                    android:text="@string/duration"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_small" />
+
+                <TextView
+                    android:id="@+id/durationTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_normal"
+                    android:paddingRight="@dimen/padding_normal"
+                    android:text="placeholder"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_normal" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/padding_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_normal"
+                    android:layout_marginRight="@dimen/padding_normal"
+                    android:text="@string/media"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_small" />
+
+                <TextView
+                    android:id="@+id/mediaTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_normal"
+                    android:paddingRight="@dimen/padding_normal"
+                    android:text="placeholder"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_normal" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/padding_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_normal"
+                    android:layout_marginRight="@dimen/padding_normal"
+                    android:text="@string/note"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_small" />
+
+                <TextView
+                    android:id="@+id/noteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_normal"
+                    android:paddingRight="@dimen/padding_normal"
+                    android:text="placeholder"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_normal" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/padding_small" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small">
+
+            <Button
+                android:id="@+id/buttonOk"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/button_ok"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_dialog_button" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

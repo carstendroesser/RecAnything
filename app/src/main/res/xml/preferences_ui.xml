@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/settings_sub_interface">
+
+    <com.carstendroesser.audiorecorder.views.PreferenceHeader android:title="@string/settings_dialogs">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="quickrenaming"
+            android:summary="@string/settings_summary_quickrenaming"
+            android:title="@string/settings_title_quickrenaming" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="confirmabort"
+            android:summary="@string/settings_summary_confirmabort"
+            android:title="@string/settings_title_confirmabort" />
+
+    </com.carstendroesser.audiorecorder.views.PreferenceHeader>
+    
+</PreferenceScreen>

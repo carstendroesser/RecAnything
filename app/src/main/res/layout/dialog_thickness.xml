@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_normal"
+            android:text="@string/dialog_thickness_title"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_normal"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_normal"
+            android:layout_marginRight="@dimen/padding_normal"
+            android:padding="@dimen/padding_normal"
+            android:progressBackgroundTint="@color/red"
+            android:progressTint="@color/red"
+            android:secondaryProgressTint="@color/gray"
+            android:thumbTint="@color/red" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small">
+
+            <Button
+                android:id="@+id/buttonCancel"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/button_cancel"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_dialog_button" />
+
+            <Button
+                android:id="@+id/buttonApply"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/apply"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_dialog_button" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarSize="@dimen/scrollbar_size"
+        android:scrollbarThumbVertical="@drawable/background_scrollview_scrollbarstyle_vertical"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:id="@+id/contextMenuListContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_normal"
+                android:text="@string/contentmenu_header_actions"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_normal"
+                android:textStyle="bold" />
+
+            <com.carstendroesser.audiorecorder.views.ContextMenuItem
+                android:id="@+id/contextMenuItemRename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:itemAlternativeTextColor="@color/black"
+                app:itemIcon="@drawable/pencil"
+                app:itemText="@string/contextmenu_action_rename" />
+
+            <com.carstendroesser.audiorecorder.views.ContextMenuItem
+                android:id="@+id/contextMenuItemRecategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:itemAlternativeTextColor="@color/black"
+                app:itemIcon="@drawable/category"
+                app:itemText="@string/contextmenu_action_recategory" />
+
+            <com.carstendroesser.audiorecorder.views.ContextMenuItem
+                android:id="@+id/contextMenuItemTrim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:itemAlternativeTextColor="@color/black"
+                app:itemIcon="@drawable/cut"
+                app:itemText="@string/contextmenu_action_cut" />
+
+            <com.carstendroesser.audiorecorder.views.ContextMenuItem
+                android:id="@+id/contextMenuItemDelete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:itemAlternativeTextColor="@color/black"
+                app:itemIcon="@drawable/delete"
+                app:itemText="@string/contextmenu_action_delete" />
+
+            <com.carstendroesser.audiorecorder.views.ContextMenuItem
+                android:id="@+id/contextMenuItemMore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small"
+                android:clickable="true"
+                app:itemAlternativeTextColor="@color/black"
+                app:itemText="@string/contextmenu_action_more" />
+
+            <LinearLayout
+                android:id="@+id/contextMenuListContainerExpansion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_small"
+                    android:padding="@dimen/padding_normal"
+                    android:text="@string/contextmenu_header_share"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_normal"
+                    android:textStyle="bold" />
+
+                <com.carstendroesser.audiorecorder.views.ContextMenuItem
+                    android:id="@+id/contextMenuItemShare"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    app:itemAlternativeTextColor="@color/black"
+                    app:itemIcon="@drawable/share"
+                    app:itemText="@string/contextmenu_action_share" />
+
+                <com.carstendroesser.audiorecorder.views.ContextMenuItem
+                    android:id="@+id/contextMenuItemExternalPlayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    app:itemAlternativeTextColor="@color/black"
+                    app:itemIcon="@drawable/external_player"
+                    app:itemText="@string/contextmenu_action_externalplayer" />
+
+                <com.carstendroesser.audiorecorder.views.ContextMenuItem
+                    android:id="@+id/contextMenuItemSetRingtone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    app:itemAlternativeTextColor="@color/black"
+                    app:itemIcon="@drawable/musicnote"
+                    app:itemText="@string/contextmenu_action_setringtone" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_small"
+                    android:padding="@dimen/padding_normal"
+                    android:text="@string/contextmenu_header_attachments"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_normal"
+                    android:textStyle="bold" />
+
+                <com.carstendroesser.audiorecorder.views.ContextMenuItem
+                    android:id="@+id/contextMenuItemNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    app:itemAlternativeTextColor="@color/black"
+                    app:itemIcon="@drawable/note"
+                    app:itemText="@string/contextmenu_action_note" />
+
+                <com.carstendroesser.audiorecorder.views.ContextMenuItem
+                    android:id="@+id/contextMenuItemTakePhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    app:itemAlternativeTextColor="@color/black"
+                    app:itemIcon="@drawable/camera"
+                    app:itemText="@string/contextmenu_action_photo" />
+
+                <com.carstendroesser.audiorecorder.views.ContextMenuItem
+                    android:id="@+id/contextMenuItemPickPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    app:itemAlternativeTextColor="@color/black"
+                    app:itemIcon="@drawable/image"
+                    app:itemText="@string/contextmenu_action_gallery" />
+
+                <com.carstendroesser.audiorecorder.views.ContextMenuItem
+                    android:id="@+id/contextMenuItemPainting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    app:itemAlternativeTextColor="@color/black"
+                    app:itemIcon="@drawable/palette"
+                    app:itemText="@string/contextmenu_action_painting" />
+
+                <TextView
+                    android:id="@+id/contextMenuNoteHint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:paddingLeft="@dimen/padding_normal"
+                    android:paddingRight="@dimen/padding_normal"
+                    android:paddingTop="@dimen/padding_small"
+                    android:text="@string/attach_note_not_available"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_listitem_secondary" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_small"
+                    android:padding="@dimen/padding_normal"
+                    android:text="@string/contextmenu_header_about"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_normal"
+                    android:textStyle="bold" />
+
+                <com.carstendroesser.audiorecorder.views.ContextMenuItem
+                    android:id="@+id/contextMenuItemAbout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    app:itemAlternativeTextColor="@color/black"
+                    app:itemIcon="@drawable/about"
+                    app:itemText="@string/contextmenu_action_about" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/padding_small" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

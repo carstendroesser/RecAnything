@@ -1,0 +1,49 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorPrimaryDark">@color/darkred</item>
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+    <style name="DialogsAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_out</item>
+    </style>
+
+    <style name="ProgressDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/red</item>
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+
+    <style name="SettingsStyle" parent="AppTheme">
+        <item name="colorAccent">@color/red</item>
+        <item name="colorControlNormal">@color/red</item>
+        <item name="android:windowBackground">@color/white</item>
+
+    </style>
+
+    <style name="SettingsToolbarStyle" parent="AppTheme"></style>
+
+    <style name="PopupStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">@color/red</item>
+        <item name="colorControlActivated">@color/red</item>
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorPrimaryDark">@color/darkred</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="EditTextStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">@color/red</item>
+        <item name="colorControlActivated">@color/darkred</item>
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorPrimaryDark">@color/darkred</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:textCursorDrawable">@drawable/red_cursor</item>
+        <item name="android:textSize">@dimen/textsize_normal</item>
+    </style>
+
+</resources>

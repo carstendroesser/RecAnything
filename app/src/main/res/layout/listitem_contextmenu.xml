@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/contextMenuItemImageView"
+        android:layout_width="?android:attr/actionBarSize"
+        android:layout_height="?android:attr/actionBarSize"
+        android:padding="@dimen/padding_normal"
+        android:scaleType="fitXY" />
+
+    <android.support.v4.widget.Space
+        android:id="@+id/contextMenuItemSpace"
+        android:layout_width="@dimen/padding_normal"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/contextMenuItemTextView"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:gravity="center_vertical"
+        android:paddingRight="@dimen/padding_normal"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_normal"
+        tools:text="senden an" />
+
+</LinearLayout>

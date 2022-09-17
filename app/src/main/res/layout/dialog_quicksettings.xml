@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:theme="@style/PopupStyle">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_normal"
+            android:text="@string/quick_settings"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_normal"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/quickSettingsAttentionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_normal"
+            android:layout_marginRight="@dimen/padding_normal"
+            android:text="@string/quicksettings_attention"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_small" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/padding_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_normal"
+            android:layout_marginRight="@dimen/padding_normal"
+            android:text="@string/settings_title_recorder"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_small"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/recorderSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            android:textSize="@dimen/textsize_normal" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/padding_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_normal"
+            android:layout_marginRight="@dimen/padding_normal"
+            android:text="@string/settings_title_detectsilence"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_small"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/skipSilenceSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_marginLeft="@dimen/padding_normal"
+            android:layout_marginRight="@dimen/padding_normal"
+            android:text="@string/settings_title_detectsilence"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_normal" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/padding_normal" />
+
+        <TextView
+            android:id="@+id/gainvalueTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_normal"
+            android:layout_marginRight="@dimen/padding_normal"
+            android:text="@string/settings_title_gainvalue"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_small"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:orientation="horizontal">
+
+            <!-- time already played -->
+            <TextView
+                android:id="@+id/leftChronometerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding_normal"
+                android:gravity="center_vertical"
+                android:text="+0 dB"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_small" />
+
+            <!-- the seekbar for playback -->
+            <SeekBar
+                android:id="@+id/gainvalueSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:max="8"
+                android:progressBackgroundTint="@color/red"
+                android:progressTint="@color/red"
+                android:secondaryProgress="8"
+                android:secondaryProgressTint="@color/gray"
+                android:thumbTint="@color/red" />
+
+            <!-- time left to be played -->
+            <TextView
+                android:id="@+id/rightChronometerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/padding_normal"
+                android:gravity="center_vertical"
+                android:text="+16 dB"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_small" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small">
+
+            <Button
+                android:id="@+id/buttonClose"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/button_close"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_dialog_button" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
